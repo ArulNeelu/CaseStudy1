@@ -1,0 +1,9 @@
+<div class="payment-container">
+  <h2>Payment</h2>
+  <div class="payment-options">
+    <button (click)="selectPaymentOption('creditCard')">Credit Card</button>
+    <button (click)="selectPaymentOption('paypal')">PayPal</button>
+    <button (click)="selectPaymentOption('bankTransfer')">Bank Transfer</button>
+  </div>
+  <button (click)="submitPayment()">Proceed to Summary</button>
+</div>

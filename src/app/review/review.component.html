@@ -1,0 +1,17 @@
+<div class="review-container">
+  <h2>Review Products</h2>
+  <ul class="review-list">
+    <li class="review-item" *ngFor="let product of products">
+      <div class="product-details">
+        <span class="product-name">{{ product.name }}</span>
+        <span class="product-price">$ {{ product.price }}</span>
+        <span class="product-quantity">Quantity: {{ product.selected }}</span>
+      </div>
+      <div class="review-actions">
+        <button (click)="editProduct()">Edit</button>
+        <button (click)="deleteProduct(product)">Delete</button>
+      </div>
+    </li>
+  </ul>
+  <button (click)="goToPayment()">Next</button>
+</div>

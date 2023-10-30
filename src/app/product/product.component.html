@@ -1,0 +1,17 @@
+<div class="product-container">
+  <h2>Product Selection</h2>
+  <ul class="product-list">
+    <li class="product-item" *ngFor="let product of products">
+      <div class="product-details">
+        <span class="product-name">{{ product.name }}</span>
+        <span class="product-price">$ {{ product.price }}</span>
+      </div>
+      <div class="product-actions">
+        <button (click)="addToCart(product, -1)">-</button>
+        {{ product.selected }}
+        <button (click)="addToCart(product, 1)">+</button>
+      </div>
+    </li>
+  </ul>
+  <button (click)="goToReview()">Next</button>
+</div>

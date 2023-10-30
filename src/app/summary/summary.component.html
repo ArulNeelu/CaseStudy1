@@ -1,0 +1,14 @@
+<div class="summary-container">
+  <h2>Summary</h2>
+  <ul class="summary-list">
+    <li class="summary-item" *ngFor="let product of products">
+      <div class="product-details">
+        <span class="product-name">{{ product.name }}</span>
+        <span class="product-price">$ {{ product.price }}</span>
+        <span class="product-quantity">Quantity: {{ product.selected }}</span>
+      </div>
+    </li>
+  </ul>
+  <div class="total-price">Total Price: $ {{ getTotalPrice() }}</div>
+  <button (click)="confirmOrder()">Confirm Order</button>
+</div>
